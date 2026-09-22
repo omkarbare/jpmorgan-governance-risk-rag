@@ -1,0 +1,43 @@
+# Environment files and secrets
+.env
+.env.*
+!.env.example
+!.env.local.example
+
+# Python environments and cache
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node and Next.js
+node_modules/
+.next/
+out/
+.turbo/
+
+# Qdrant local storage
+qdrant/storage/*
+!qdrant/storage/.gitkeep
+
+# Local vector/index artifacts
+chroma_db/
+embeddings_cache/
+artifacts/
+
+# Test and runtime outputs
+*.log
+coverage/
+htmlcov/
+test-results/
+test_rag_results.md
+chunks_preview.txt
+sample_chunk.txt
+
+# Operating system/editor files
+.DS_Store
+.vscode/
+.idea/

@@ -1,0 +1,11 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: jpmorgan-rag-backend
+    ports:
+      - "8000:8000"
+    environment:
+      PORT: 8000
+    restart: unless-stopped
