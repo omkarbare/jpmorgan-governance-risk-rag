@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-09-23T09:20:45.631827+00:00",
+  "dataset": "/Users/omkarbare/Documents/Projects/jpmorgan-governance-risk-rag/evals/datasets/governance_rag_v1.jsonl",
+  "api_url": "http://127.0.0.1:8000",
+  "total_cases": 19,
+  "passed_cases": 17,
+  "failed_cases": 2,
+  "pass_rate": 0.8947,
+  "guardrail_block_rate": 1.0,
+  "citation_presence_rate": 1.0,
+  "expected_document_hit_rate": 1.0,
+  "latency_ms": {
+    "count": 19,
+    "mean": 5980.79,
+    "median": 8282,
+    "p95": 11186.4,
+    "max": 11352
+  },
+  "failed_case_ids": [
+    "boundary-001",
+    "boundary-003"
+  ]
+}

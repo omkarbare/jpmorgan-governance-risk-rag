@@ -41,3 +41,30 @@ sample_chunk.txt
 .DS_Store
 .vscode/
 .idea/
+
+# Python
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+!.env.local.example
+
+# Node / Next.js
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+
+# OS / IDE
+.DS_Store
+.vscode/
+.idea/
+
+# Evaluation artifacts that may contain generated answers
+evals/results/*.jsonl
+evals/results/*.csv

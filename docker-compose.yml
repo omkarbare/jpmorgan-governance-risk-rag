@@ -1,11 +1,13 @@
+version: "3.9"
+
 services:
-  backend:
-    build:
-      context: ./backend
-      dockerfile: Dockerfile
-    container_name: jpmorgan-rag-backend
+  qdrant:
+    image: qdrant/qdrant:latest
     ports:
-      - "8000:8000"
+      - "6333:6333"   # REST API
+      - "6334:6334"   # gRPC (used by some clients)
+    volumes:
+      - ./qdrant_storage:/qdrant/storage
     environment:
-      PORT: 8000
+      - QDRANT__SERVICE__GRPC_PORT=6334
     restart: unless-stopped

@@ -1,0 +1,24 @@
+model_list:
+  - model_name: "jpm-router"
+    litellm_params:
+      model: "groq/qwen/qwen3.8-27b"
+      api_key: os.environ/GROQ_API_KEY
+      timeout: 30
+      max_retries: 3
+      cache: true
+
+  - model_name: "jpm-router"
+    litellm_params:
+      model: "openai/gpt-4o-mini"
+      api_key: os.environ/GROQ_API_KEY
+      timeout: 30
+      max_retries: 3
+
+# Global settings
+litellm_settings:
+  set_verbose: false
+  drop_params: true
+  num_retries: 3
+  request_timeout: 30
+  fallbacks:
+    - jpm-router: ["jpm-router"]

@@ -1,0 +1,31 @@
+{
+  "api_url": "http://127.0.0.1:8000",
+  "dataset": "/Users/omkarbare/Documents/Projects/jpmorgan-governance-risk-rag/evals/datasets/governance_rag_v1.jsonl",
+  "top_k": 5,
+  "methods": [
+    {
+      "method": "dense",
+      "top_k": 5,
+      "questions_evaluated": 62,
+      "hits": 29,
+      "hit_rate": 0.4677,
+      "mrr": 0.4677
+    },
+    {
+      "method": "sparse",
+      "top_k": 5,
+      "questions_evaluated": 62,
+      "hits": 29,
+      "hit_rate": 0.4677,
+      "mrr": 0.4677
+    },
+    {
+      "method": "hybrid",
+      "top_k": 5,
+      "questions_evaluated": 62,
+      "hits": 29,
+      "hit_rate": 0.4677,
+      "mrr": 0.4677
+    }
+  ]
+}

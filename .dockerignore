@@ -1,0 +1,13 @@
+.git
+.github
+venv
+frontend/node_modules
+frontend/.next
+frontend/out
+__pycache__
+*.pyc
+.env
+.env.*
+evals/results
+backups
+.DS_Store
