@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { AnswerCard } from "@/components/assistant/AnswerCard";
 import { AskComposer } from "@/components/assistant/AskComposer";
-import { RequestTimeline } from "@/components/assistant/RequestTimeline";
 import { GuardrailExamples } from "@/components/site/GuardrailExamples";
 import { askRag, type ApiRequestError, type AskResponse } from "@/lib/api";
 
@@ -208,7 +207,6 @@ export default function HomePage() {
             </div>
           ) : null}
 
-          {isLoading ? <RequestTimeline isRunning /> : null}
 
           {error ? (
             <section className="error-card" role="alert">

@@ -1,6 +1,5 @@
 import type { AskResponse } from "@/lib/api";
 import { CitationList } from "./CitationList";
-import { RequestTimeline } from "./RequestTimeline";
 import { RunMetadata } from "./RunMetadata";
 
 type AnswerCardProps = {
@@ -43,17 +42,15 @@ export function AnswerCard({
         </p>
 
         {getParagraphs(response.answer).map((paragraph, index) => (
-          <p key={`${index}-${paragraph.slice(0, 25)}`}>{paragraph}</p>
+          <p key={`${index}-${paragraph.slice(0, 25)}`}>
+            {paragraph}
+          </p>
         ))}
       </section>
 
-      {!isBlocked ? <CitationList citations={response.citations} response={response} /> : null}
-
-      <RequestTimeline
-        isRunning={false}
-        steps={response.steps}
-        blocked={isBlocked}
-      />
+      {!isBlocked ? (
+        <CitationList citations={response.citations} response={response} />
+      ) : null}
     </article>
   );
 }
